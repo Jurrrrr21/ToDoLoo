@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap" rel="stylesheet">
+    <title>ToDoLoo</title>
+</head>
+<body>
+    <main>
+        <nav class = "navbar">
+            <div class="navdiv">
+                <div class="logo">
+                    <a href="#">ToDoLoo</a>
+                </div>
+                <ul>
+                    <li class = "<%= view === 'today' ? 'active' : '' %>">
+                        <a href="/?view=today">Today</a>
+                    </li>
+                    <li class = "<%= view === 'week' ? 'active' : '' %>">
+                        <a href="/?view=week">Week</a>
+                    </li>
+                    <li class = "<%= view === 'month' ? 'active' : '' %>">
+                        <a href="/?view=month">Month</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>

@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Playpen Sans Hebrew", regular400;
+    background-color: #626F47;
+}
+
+.navbar{
+    background: #A4B465;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 4px 4px #222222;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #222222;
+}
+
+.navbar li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar li a{
+    font-size: 20px;
+    margin: 15px;
+    font-weight: 600;
+    color: #222222;
+    padding: 5px;
+}
+
+.navbar li.active a {
+  background-color: #F0BB78;
+  color: #222222;
+  border-radius: 5px;
+}
+
+.navbar li:hover{
+    transition: 3ms;
+    transform: translateY(-2px);
+}
+
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+footer {
+  flex: 0 0 auto;
+  text-align: center;
+}

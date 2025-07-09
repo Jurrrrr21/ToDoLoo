@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs"); -%>
+
+<% if (view === 'today') { %>
+<h2>Today's Dos</h2>
+
+<%} else if (view === 'week') { %>
+<h2>This Week's Dos</h2>
+
+<%} else if (view === 'month') { %>
+<h2>This Month's Dos</h2>
+<% } %>
+<%- include("partials/footer.ejs") -%>
