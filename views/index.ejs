@@ -1,12 +1,80 @@
 <%- include("partials/header.ejs"); -%>
 
 <% if (view === 'today') { %>
-<h2>Today's Dos</h2>
+<div class="headerBox">
+    <h2>Today's Dos</h2>
+    
+</div>
+<div class="listContainer">
+    <% for(let task of listOfTasks){ %>
+        <div class="task">
+            <form action="/delete" method="post">
+                <input type="checkbox" onchange="this.form.submit()" name="deleteItemId" value="<% task.id %>">
+            </form>
+
+            <p id="title<%=task.id%>">
+                <%= task.title %>
+            </p>
+        </div>
+
+    <% } %>
+
+    <form class="task" action="/add" method="post">
+        <input type="text" name="newTask" placeholder="Add new task" autocomplete="off" autofocus="true">
+        <button class="add" type="submit" name="list" value="view"><img class="icon" src="/assets/icons/add-icon.svg" alt="Add Button"></button>
+    </form>
+
+</div>
+
 
 <%} else if (view === 'week') { %>
-<h2>This Week's Dos</h2>
+<div class="headerBox">
+    <h2>Week's Dos</h2>
+</div>
+<div class="listContainer">
+    <% for(let task of listOfTasks){ %>
+        <div class="task">
+            <form action="/delete" method="post">
+                <input type="checkbox" onchange="this.form.submit()" name="deleteItemId" value="<% task.id %>">
+            </form>
+
+            <p id="title<%=task.id%>">
+                <%= task.title %>
+            </p>
+        </div>
+
+    <% } %>
+
+    <form class="task" action="/add" method="post">
+        <input type="text" name="newTask" placeholder="Add new task" autocomplete="off" autofocus="true">
+        <button class="add" type="submit" name="list" value="view"><img class="icon" src="/assets/icons/add-icon.svg" alt="Add Button"></button>
+    </form>
+
+</div>
 
 <%} else if (view === 'month') { %>
-<h2>This Month's Dos</h2>
+<div class="headerBox">
+    <h2>Month's Dos</h2>
+</div>
+<div class="listContainer">
+    <% for(let task of listOfTasks){ %>
+        <div class="task">
+            <form action="/delete" method="post">
+                <input type="checkbox" onchange="this.form.submit()" name="deleteItemId" value="<% task.id %>">
+            </form>
+
+            <p id="title<%=task.id%>">
+                <%= task.title %>
+            </p>
+        </div>
+
+    <% } %>
+
+    <form class="task" action="/add" method="post">
+        <input type="text" name="newTask" placeholder="Add new task" autocomplete="off" autofocus="true">
+        <button class="add" type="submit" name="list" value="view"><img class="icon" src="/assets/icons/add-icon.svg" alt="Add Button"></button>
+    </form>
+
+</div>
 <% } %>
 <%- include("partials/footer.ejs") -%>
